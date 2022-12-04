@@ -1,7 +1,5 @@
 package main
 
-import "crypto/rand"
-
 type Account struct {
 	ID        int    `json:"id"`
 	FirstName string `json:"firstName"`
@@ -12,9 +10,11 @@ type Account struct {
 
 func NewAccount(firstName, lastName string) *Account {
 	return &Account{
-		ID: rand.Intn(10000),
+		// rand.Intn(10000)
+		ID: 1,
 		FirstName: firstName,
 		LastName: lastName,
-		Number: int64(rand.Intn(1000000)),
+		// int64(rand.Intn(1000000))
+		Number: 1,
 	}
 }
